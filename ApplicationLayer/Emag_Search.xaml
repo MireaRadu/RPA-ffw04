@@ -3,7 +3,7 @@
     <x:Property Name="in_criteria" Type="InArgument(x:String)" />
     <x:Property Name="out_extractedDataTable" Type="OutArgument(sd:DataTable)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>638,1950</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>638,2081</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -32,7 +32,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="618,1890" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="618,2021" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="extractedDataTable" />
       <Variable x:TypeArguments="x:String" Name="output" />
@@ -42,6 +42,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="576,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Emag_Search&quot;]" />
     <ui:BuildDataTable DataTable="[extractedDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="576,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NewPrice&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OldPrice&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'EMAGro Li Page'" sap:VirtualizedContainerService.HintSize="576,664" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="009325f66261aa668b45443e3a2689f3" Selector="&lt;html url='https://www.emag.ro*' /&gt;">
       <ui:BrowserScope.Body>

@@ -1349,9 +1349,9 @@
     "restore": {
       "projectUniqueName": "EmagPriceTracker",
       "projectName": "EmagPriceTracker",
-      "projectPath": "C:\\Users\\Radu\\Documents\\UiPath\\EmagPriceTracker\\.local",
+      "projectPath": "C:\\Users\\Radu\\Documents\\UiPath\\RPA-ffw04\\.local",
       "packagesPath": "C:\\Users\\Radu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Radu\\Documents\\UiPath\\EmagPriceTracker\\.local"
+      "outputPath": "C:\\Users\\Radu\\Documents\\UiPath\\RPA-ffw04\\.local"
     },
     "frameworks": {
       "net461": {
