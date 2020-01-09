@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>698,948</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>698,990</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CheckNewEmail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="46">
@@ -61,7 +61,7 @@
       <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="CheckNewEmail" sap:VirtualizedContainerService.HintSize="678,888" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Description: Checks if any unread emails exist. If true, loops trough them while marking them read until finds one that has attachments, in which case it is passed on for further processing. " DisplayName="CheckNewEmail" sap:VirtualizedContainerService.HintSize="678,930" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="emails" />
       <Variable x:TypeArguments="x:String" Name="email" />
@@ -75,6 +75,7 @@
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,104.5</av:PointCollection>
         <x:Double x:Key="Width">644</x:Double>
         <x:Double x:Key="Height">852.4</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -83,9 +84,9 @@
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">210,238.8</av:Point>
+          <av:Point x:Key="ShapeLocation">200,239</av:Point>
           <av:Size x:Key="ShapeSize">200,22</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">310,261.2 310,336.4</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,261 300,336.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetIMAPMailMessages TimeoutMS="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[email]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[emails]" OnlyUnreadMessages="True" Password="[new System.Net.NetworkCredential(string.Empty, password).Password]" Port="993" SecureConnection="SslOnConnect" Server="imap.gmail.com" Top="1" />
@@ -94,9 +95,9 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">270.4,336.4</av:Point>
+              <av:Point x:Key="ShapeLocation">260.5,336.5</av:Point>
               <av:Size x:Key="ShapeSize">79,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">270.4,380 190.1,380 190.1,396.5</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">260.5,380 190,380 190,396.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -134,7 +135,7 @@
                           <av:Size x:Key="ShapeSize">262,60</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign DisplayName="Assign out_email" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                         <Assign.To>
                           <OutArgument x:TypeArguments="snm:MailMessage">[out_email]</OutArgument>
                         </Assign.To>
@@ -157,7 +158,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">390,414.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">590,440.9 620,440.9 620,250 410,250</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">590,440 620,440 620,250 400,250</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Found an unacceptable email&quot;]">
@@ -185,7 +186,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,179</av:Point>
           <av:Size x:Key="ShapeSize">200,22</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,201.4 300,231.4 310,231.4 310,238.8</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,201 300,239</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetSecureCredential CredentialType="Generic" DisplayName="Get secure credential" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GetSecureCredential_1" Password="[password]" PersistanceType="Enterprise" Target="[in_credentialsTarget]" Username="[email]">
@@ -220,15 +221,5 @@
     </FlowStep>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">9,790</av:Point>
-          <av:Size x:Key="ShapeSize">230,61</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,303.8 300,333.8 155.2,333.8 155.2,213.8 300,213.8 300,229</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" />
-    </FlowStep>
   </Flowchart>
 </Activity>

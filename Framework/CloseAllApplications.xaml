@@ -56,7 +56,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Closing applications...&quot;]" />
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe eMAG.ro'" sap:VirtualizedContainerService.HintSize="434,391" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="987e7db45d5aa245f0b5df2d78809136" Selector="&lt;html url='https://www.emag.ro*' /&gt;" UiBrowser="[browser]">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Close Emag page" sap:VirtualizedContainerService.HintSize="434,391" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="987e7db45d5aa245f0b5df2d78809136" Selector="&lt;html url='https://www.emag.ro*' /&gt;" UiBrowser="[browser]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
