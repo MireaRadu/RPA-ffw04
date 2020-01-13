@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>396,674</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>427.2,869.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DownloadExcelFileFromEmail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -57,7 +57,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Saves attachment from email and renames it with an unique identifies based on the current date." DisplayName="DownloadExcelFileFromEmail" sap:VirtualizedContainerService.HintSize="376,614" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Saves attachment from email and renames it with an unique identifies based on the current date." DisplayName="DownloadExcelFileFromEmail" sap:VirtualizedContainerService.HintSize="387.2,789.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="oldFileName" />
     </Sequence.Variables>
@@ -67,8 +67,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start DownloadExcelFileFromEmail&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="364.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start DownloadExcelFileFromEmail&quot;]" />
+    <Assign DisplayName="Generate file name based on date" sap:VirtualizedContainerService.HintSize="364.8,60" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_fileName]</OutArgument>
       </Assign.To>
@@ -76,7 +76,7 @@
         <InArgument x:TypeArguments="x:String">[Now.ToString("yyyy-MM-dd-HH-mm-ss")+".xlsx"]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Get downloaded file name" sap:VirtualizedContainerService.HintSize="364.8,60" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[oldFileName]</OutArgument>
       </Assign.To>
@@ -84,7 +84,7 @@
         <InArgument x:TypeArguments="x:String">[CType(in_email.Attachments.FirstOrDefault, Attachment).Name]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" FolderPath="[in_savePath]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[in_email]" />
-    <ui:MoveFile ContinueOnError="{x:Null}" Destination="[in_savePath+&quot;\&quot;+out_fileName]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[in_savePath+&quot;\&quot;+oldFileName]" />
+    <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Rename downloaded file with generated name" FolderPath="[in_savePath]" sap:VirtualizedContainerService.HintSize="364.8,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[in_email]" />
+    <ui:MoveFile ContinueOnError="{x:Null}" Destination="[in_savePath+&quot;\&quot;+out_fileName]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="364.8,160" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="False" Path="[in_savePath+&quot;\&quot;+oldFileName]" />
   </Sequence>
 </Activity>
